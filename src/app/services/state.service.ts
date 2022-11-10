@@ -13,6 +13,7 @@ export class StateService {
   }
 
   set modeValue(value: string) {
+    localStorage.setItem('mode', value);
     this.mode.next(value);
   }
 }
