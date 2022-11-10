@@ -1,0 +1,26 @@
+.nav-block {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 40%;
+  background-color: var(--light-black);
+}
+
+.home {
+  max-width: 1648px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: 4000px) {
+  .nav-block {
+    width: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-block {
+    display: none;
+  }
+}

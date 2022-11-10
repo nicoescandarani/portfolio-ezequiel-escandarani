@@ -1,0 +1,57 @@
+<div class="nav" [ngClass]="{'nav-day': mode === 'day'}">
+  <!-- ! Switch -->
+  <div class="nav__switch">
+    <img [src]="'assets/' + icon + '.svg'" [alt]="mode === 'day' ? 'Day' : 'Night'">
+    <div class="switch-container">
+      <input (input)="changeMode()" type="checkbox" id="theme-switch" [checked]="mode === 'night'">
+      <label for="theme-switch" class="switch-label">
+        <div class="switch-overlay"></div>
+        <div class="switch-slider"></div>
+      </label>
+    </div>
+  </div>
+  <!-- ! img -->
+  <div class="nav__img">
+    <img src="assets/profile.png" alt="Ezequiel Escandarani">
+  </div>
+  <!-- ! Info -->
+  <div class="nav__info">
+    <h1>Ezequiel Escandarani</h1>
+    <h2>UI UX designer | Industrial designer</h2>
+    <a href="mailto:eze@escandarani.com.ar">eze@escandarani.com.ar</a>
+  </div>
+  <!-- ! Socials -->
+  <div class="nav__socials">
+    <div class="nav__socials__item" *ngFor="let social of socials">
+      <a [href]="social.url" target="_blank" [title]="social.name">
+        <img [src]="'assets/' + social.name.toLowerCase() + (mode === 'night' ? '-night' : '') + '.svg'" [alt]="social.name">
+      </a>
+    </div>
+  </div>
+  <!-- ! Links -->
+  <div class="nav__links">
+    <div class="nav__links__link nav__links__link--large">
+      <a class="button button--primary" href="assets.resume.pdf" target="_blank">
+        <img src="assets/download.svg" alt="Download Resume">
+        <span>My Resume</span>
+      </a>
+    </div>
+    <div class="nav__links__link nav__links__link">
+      <a class="button button--secondary" href="mailto:eze@escandarani.com.ar">Contact me</a>
+    </div>
+  </div>
+  <!-- ! Text -->
+  <div class="nav__text" [ngClass]="{'nav__text--opened-info': openedInfo}">
+    <p>I´m an Argentinian UI UX designer with an industrial design degree. At the moment, working in PwC focusing on interface and experience design for the digital transformation for a group of banks.
+      I have more than 3 years using Figma, designing interfaces centered in the user.</p>
+  </div>
+  <!-- ! CTA -->
+  <div class="nav__cta">
+    <button (click)="openInfo()">
+      <span>About me</span>
+      <svg [ngClass]="{'svg-day': mode === 'day', 'opened-info': openedInfo}" width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1.73375 -4.62125e-07L0.5 1.23375L5.75 6.48375L11 1.23375L9.76625 -3.66338e-07L5.75 4.0075L1.73375 -4.62125e-07Z" fill="white"/>
+      </svg>
+    </button>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+.tabs {
+  min-height: 100vh;
+  width: 100%;
+  padding: 70px;
+  padding-left: calc(var(--nav-width) + 70px);
+
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+
+    button {
+      border-bottom: 2px solid var(--grey);
+      width: 100%;
+      text-align: center;
+      padding: 4px;
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--white);
+    }
+  }
+}
+
+.active {
+  color: var(--orange) !important;
+  border-bottom: 2px solid var(--orange) !important;
+  font-weight: 600 !important;
+}
+
+@media (max-width: 768px) {
+  .tabs {
+    padding: 36px;
+    padding-left: 36px;
+  }
+}

@@ -1,0 +1,37 @@
+<div class="skills">
+  <!-- ! Skills -->
+  <div class="skills__skills">
+    <div class="skills__container">
+      <ul>
+        <li *ngFor="let skill of skills">
+          <img class="skills__container__dot" src="assets/dot.svg" [alt]="skill.name">
+          <span>{{ skill.name }}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- ! Tools -->
+  <div class="skills__tools">
+    <div class="skills__container skills__container">
+      <h2 [ngClass]="{'border-day': (mode$ | async) === 'day'}">Tools</h2>
+      <ul class="padding">
+        <li *ngFor="let tool of tools">
+          <img [src]="'assets/' + tool.icon + '.svg'" [alt]="tool.name">
+          <span>{{ tool.name }}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- ! Languajes -->
+  <div class="skills__languajes">
+    <div class="skills__container">
+      <h2 [ngClass]="{'border-day': (mode$ | async) === 'day'}">Languajes</h2>
+      <ul class="padding">
+        <li *ngFor="let languaje of languajes">
+          <img src="assets/dot.svg" [alt]="languaje.name">
+          <span>{{ languaje.name }}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

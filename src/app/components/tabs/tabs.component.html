@@ -1,0 +1,17 @@
+<div class="tabs" id="tabs">
+  <div class="tabs__links">
+    <button (click)="selectTab('projects')" [ngClass]="{'active': selectedTab === 'projects', 'text-black': (mode$ | async) === 'day'}">Projects</button>
+    <button (click)="selectTab('skills')" [ngClass]="{'active': selectedTab === 'skills', 'text-black': (mode$ | async) === 'day'}">Skills</button>
+  </div>
+  <div class="tabs__tab-wrapper">
+    <ng-template [ngTemplateOutlet]="selectedTab === 'projects' ? projects : skills"></ng-template>
+  </div>
+</div>
+
+<ng-template #projects>
+  <app-projects></app-projects>
+</ng-template>
+
+<ng-template #skills>
+  <app-skills></app-skills>
+</ng-template>

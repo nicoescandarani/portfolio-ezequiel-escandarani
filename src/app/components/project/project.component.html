@@ -1,0 +1,25 @@
+<div class="project">
+  <a [href]="project.url || '/'" target="_blank">
+    <div class="project__view">
+      <div class="project__overlay"></div>
+      <img class="project__img" [src]="project.img || 'assets/project-placeholder-image.jpeg'" [alt]="project.title">
+      <div class="project__info">
+        <div class="project__info__platform">
+          <span>{{ project.platform }}</span>
+        </div>
+        <div class="project__info__description">
+          <p>{{ project.description }}</p>
+        </div>
+        <div class="project__info__technologies">
+          <div class="project__info__technologies__technology" *ngFor="let technology of project.technologies">
+              <img [src]="'assets/' + technology + '.svg'" [alt]="technology | titlecase">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="project__open-project">
+      <img *ngIf="project.platform" [src]="'assets/' + project.platform.toLowerCase() + '.svg'" [alt]="project.title">
+      <span>Open project</span>
+    </div>
+  </a>
+</div>
