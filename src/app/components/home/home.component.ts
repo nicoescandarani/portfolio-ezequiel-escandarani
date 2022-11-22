@@ -1,3 +1,5 @@
+import { Observable } from 'rxjs';
+import { StateService } from './../../services/state.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  mode$: Observable<string>;
+
+  constructor(private stateService: StateService) {
+    this.mode$ = this.stateService.mode$;
+  }
 
   ngOnInit(): void {
   }

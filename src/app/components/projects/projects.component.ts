@@ -15,28 +15,25 @@ export class ProjectsComponent implements OnInit {
 
   projects: Project[] = [
     {
-      // img: 'assets/img/1.png',
-      title: 'Project 1',
+      img: 'assets/portfolio.png',
+      title: 'Personal UI UX portfolio',
       platform: 'Behance',
-      description: 'UI/UX Redisgn and stuff, bla bla bla bla bla bla bla bla bla bla bla bla',
-      url: 'https://www.google.com',
-      technologies: ['behance', 'instagram', 'linkedin']
+      url: 'https://www.behance.net/gallery/155568261/UI-UX-designer-web-portfolio-design-process',
+      technologies: []
     },
     {
-      // img: 'assets/img/2.png',
-      title: 'Project 2',
+      img: 'assets/behance-redesign.png',
+      title: 'Behance redesign',
       platform: 'Behance',
-      description: 'UI/UX Redisgn and stuff, bla bla bla bla bla bla bla bla bla bla bla bla',
-      url: 'https://www.google.com',
-      technologies: ['behance', 'instagram', 'linkedin']
+      url: 'https://www.behance.net/gallery/140037319/Rediseno-Behance-Caso-de-estudio-UXUI-2022',
+      technologies: []
     },
     {
-      // img: 'assets/img/3.png',
-      title: 'Project 3',
+      img: 'assets/dedo-design.png',
+      title: 'Dedo design',
       platform: 'Behance',
-      description: 'UI/UX Redisgn and stuff, bla bla bla bla bla bla bla bla bla bla bla bla',
-      url: 'https://www.google.com',
-      technologies: ['behance', 'instagram', 'linkedin']
+      url: 'https://www.behance.net/gallery/99856657/DEDO-ejercicio-UXUI',
+      technologies: []
     }
   ]
 

@@ -1,4 +1,4 @@
-<div class="nav-block"></div>
+<div class="nav-block" [ngClass]="{'nav-day': (mode$ | async) === 'day'}"></div>
 <div class="home">
   <app-nav></app-nav>
   <app-tabs></app-tabs>
