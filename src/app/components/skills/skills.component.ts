@@ -14,12 +14,16 @@ export class SkillsComponent implements OnInit {
 
   skills: Skill[] = [
     {
-      name: 'Research',
-      level: 'Intermediate'
-    },
-    {
       name: 'UI design',
       level: 'Advanced'
+    },
+    {
+      name: 'UX design',
+      level: 'Advanced'
+    },
+    {
+      name: 'Research',
+      level: 'Intermediate'
     },
     {
       name: 'Wireframing',
@@ -32,7 +36,12 @@ export class SkillsComponent implements OnInit {
     {
       name: 'Userflow',
       level: 'Advanced'
+    },
+    {
+      name: 'Testing',
+      level: 'Advanced'
     }
+
   ];
   tools: Skill[] = [
     {
