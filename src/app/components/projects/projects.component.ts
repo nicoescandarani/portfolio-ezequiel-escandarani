@@ -35,13 +35,6 @@ export class ProjectsComponent implements OnInit {
       platform: 'Behance',
       url: 'https://www.behance.net/gallery/99856657/DEDO-ejercicio-UXUI',
       technologies: []
-    },
-    {
-      img: 'assets/dedo-design.png',
-      title: 'Dedo design',
-      platform: 'Behance',
-      url: 'https://www.behance.net/gallery/99856657/DEDO-ejercicio-UXUI',
-      technologies: []
     }
   ]
 
