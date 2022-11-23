@@ -13,6 +13,7 @@ export class ProjectsComponent implements OnInit {
 
   mode: Observable<string>;
 
+  // ! Add or remove projects.
   projects: Project[] = [
     {
       img: 'assets/portfolio.png',
@@ -26,6 +27,13 @@ export class ProjectsComponent implements OnInit {
       title: 'Behance redesign',
       platform: 'Behance',
       url: 'https://www.behance.net/gallery/140037319/Rediseno-Behance-Caso-de-estudio-UXUI-2022',
+      technologies: []
+    },
+    {
+      img: 'assets/dedo-design.png',
+      title: 'Dedo design',
+      platform: 'Behance',
+      url: 'https://www.behance.net/gallery/99856657/DEDO-ejercicio-UXUI',
       technologies: []
     },
     {
