@@ -90,7 +90,6 @@ export class SkillsComponent implements OnInit {
       level: 'Advanced'
     }
   ]
-
   constructor(private stateService: StateService) {
     this.mode$ = this.stateService.mode$;
   }
